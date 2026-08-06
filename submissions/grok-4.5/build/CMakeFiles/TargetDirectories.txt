@@ -1,0 +1,3 @@
+/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build/CMakeFiles/black_hole_sim.dir
+/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build/CMakeFiles/rebuild_cache.dir

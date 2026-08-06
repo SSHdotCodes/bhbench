@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-rpath,/opt/homebrew/lib CMakeFiles/blackhole.dir/src/main.cpp.o -o blackhole  -Wl,-rpath,/opt/homebrew/lib /opt/homebrew/lib/libglfw.3.4.dylib /opt/homebrew/lib/libglm.dylib -framework OpenGL

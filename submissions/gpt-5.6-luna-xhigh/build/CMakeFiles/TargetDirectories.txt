@@ -1,0 +1,3 @@
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d-3/black-hole-cpp-codexlunaxhigh/build/CMakeFiles/black_hole.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d-3/black-hole-cpp-codexlunaxhigh/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d-3/black-hole-cpp-codexlunaxhigh/build/CMakeFiles/rebuild_cache.dir

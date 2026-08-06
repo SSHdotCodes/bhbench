@@ -1,0 +1,3 @@
+/Users/sshpro/Documents/Codex/2026-06-18/make-a-highly-scientifically-accurate-3d/black-hole-cpp-codex/build/CMakeFiles/BlackHoleSim.dir
+/Users/sshpro/Documents/Codex/2026-06-18/make-a-highly-scientifically-accurate-3d/black-hole-cpp-codex/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/Documents/Codex/2026-06-18/make-a-highly-scientifically-accurate-3d/black-hole-cpp-codex/build/CMakeFiles/rebuild_cache.dir

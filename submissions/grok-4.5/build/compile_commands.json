@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/main.cpp.o -c /Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/main.cpp",
+  "file": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/main.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/shader.cpp.o -c /Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/shader.cpp",
+  "file": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/shader.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/shader.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/camera.cpp.o -c /Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/camera.cpp",
+  "file": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/camera.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/camera.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/mesh.cpp.o -c /Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/mesh.cpp",
+  "file": "/Users/sshpro/Documents/Codex/2026-07-08/ope/black-hole-cpp-grok45/src/mesh.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/mesh.cpp.o"
+}
+]

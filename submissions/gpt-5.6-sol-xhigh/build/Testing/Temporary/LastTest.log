@@ -1,0 +1,19 @@
+Start testing: Jul 09 13:56 EDT
+----------------------------------------------------------
+1/1 Testing: SchwarzschildGeodesics
+1/1 Test: SchwarzschildGeodesics
+Command: "/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/geodesic-tests"
+Directory: /Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build
+"SchwarzschildGeodesics" start time: Jul 09 13:56 EDT
+Output:
+----------------------------------------------------------
+Schwarzschild geodesic invariants and capture boundary: PASS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SchwarzschildGeodesics" end time: Jul 09 13:56 EDT
+"SchwarzschildGeodesics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 09 13:56 EDT

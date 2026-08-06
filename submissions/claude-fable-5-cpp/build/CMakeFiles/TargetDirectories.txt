@@ -1,0 +1,3 @@
+/Users/sshpro/black-hole-cpp-fable5/build/CMakeFiles/blackhole.dir
+/Users/sshpro/black-hole-cpp-fable5/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/black-hole-cpp-fable5/build/CMakeFiles/rebuild_cache.dir

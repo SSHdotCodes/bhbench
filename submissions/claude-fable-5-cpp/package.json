@@ -1,0 +1,10 @@
+{
+  "name": "event-horizon-laboratory",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bash build-web.sh",
+    "start": "node server.js"
+  }
+}

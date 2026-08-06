@@ -1,0 +1,11 @@
+# ninja log v5
+4	376	1783623071124910717	CMakeFiles/physics_tests.dir/tests/physics_tests.cpp.o	a8a7decaa863f1f1
+376	408	1783623071157753809	physics_tests	37ea5dd779d5b0eb
+423	453	1783621785489231092	schwarzschild_lab	733343223f404c2b
+411	516	1783623071261927614	schwarzschild_lab.app/Contents/MacOS/schwarzschild_lab	666ad36a1a522921
+1	6	0	clean	cd9220c4aa469d98
+4	411	1783623071159266650	CMakeFiles/schwarzschild_lab.dir/src/main.cpp.o	dc4aeb2f8813d020
+4	371	1783623177262960580	CMakeFiles/physics_tests.dir/tests/physics_tests.cpp.o	a8a7decaa863f1f1
+4	401	1783623177291908942	CMakeFiles/schwarzschild_lab.dir/src/main.cpp.o	dc4aeb2f8813d020
+371	403	1783623177296296840	physics_tests	37ea5dd779d5b0eb
+401	504	1783623177393301482	schwarzschild_lab.app/Contents/MacOS/schwarzschild_lab	666ad36a1a522921

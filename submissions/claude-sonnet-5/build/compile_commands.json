@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/sshpro/black-hole-cpp-sonnet5/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DSHADER_DIR=\\\"/Users/sshpro/black-hole-cpp-sonnet5/shaders/\\\" -I/Users/sshpro/black-hole-cpp-sonnet5/src -isystem /opt/homebrew/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/main.cpp.o -c /Users/sshpro/black-hole-cpp-sonnet5/src/main.cpp",
+  "file": "/Users/sshpro/black-hole-cpp-sonnet5/src/main.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/black-hole-cpp-sonnet5/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DSHADER_DIR=\\\"/Users/sshpro/black-hole-cpp-sonnet5/shaders/\\\" -I/Users/sshpro/black-hole-cpp-sonnet5/src -isystem /opt/homebrew/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/Shader.cpp.o -c /Users/sshpro/black-hole-cpp-sonnet5/src/Shader.cpp",
+  "file": "/Users/sshpro/black-hole-cpp-sonnet5/src/Shader.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/Shader.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/black-hole-cpp-sonnet5/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DSHADER_DIR=\\\"/Users/sshpro/black-hole-cpp-sonnet5/shaders/\\\" -I/Users/sshpro/black-hole-cpp-sonnet5/src -isystem /opt/homebrew/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/Camera.cpp.o -c /Users/sshpro/black-hole-cpp-sonnet5/src/Camera.cpp",
+  "file": "/Users/sshpro/black-hole-cpp-sonnet5/src/Camera.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/Camera.cpp.o"
+},
+{
+  "directory": "/Users/sshpro/black-hole-cpp-sonnet5/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -DSHADER_DIR=\\\"/Users/sshpro/black-hole-cpp-sonnet5/shaders/\\\" -I/Users/sshpro/black-hole-cpp-sonnet5/src -isystem /opt/homebrew/include -iframework /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/black_hole_sim.dir/src/GridMesh.cpp.o -c /Users/sshpro/black-hole-cpp-sonnet5/src/GridMesh.cpp",
+  "file": "/Users/sshpro/black-hole-cpp-sonnet5/src/GridMesh.cpp",
+  "output": "CMakeFiles/black_hole_sim.dir/src/GridMesh.cpp.o"
+}
+]

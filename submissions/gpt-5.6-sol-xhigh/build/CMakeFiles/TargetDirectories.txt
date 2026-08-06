@@ -1,0 +1,5 @@
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/CMakeFiles/black-hole-sim.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/CMakeFiles/geodesic-tests.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/CMakeFiles/test.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d/black-hole-cpp-solxhigh/build/CMakeFiles/rebuild_cache.dir

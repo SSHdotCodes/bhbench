@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/BlackHoleSim.dir/src/main.mm.o -o BlackHoleSim.app/Contents/MacOS/BlackHoleSim  -framework Cocoa -framework OpenGL -framework QuartzCore

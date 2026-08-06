@@ -1,0 +1,19 @@
+Start testing: Jul 09 14:51 EDT
+----------------------------------------------------------
+1/1 Testing: schwarzschild_physics
+1/1 Test: schwarzschild_physics
+Command: "/Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d-4/black-hole-cpp-solultra/build/physics_tests"
+Directory: /Users/sshpro/Documents/Codex/2026-07-09/make-a-highly-scientifically-accurate-3d-4/black-hole-cpp-solultra/build
+"schwarzschild_physics" start time: Jul 09 14:51 EDT
+Output:
+----------------------------------------------------------
+All Schwarzschild physics tests passed.
+<end of output>
+Test time =   0.12 sec
+----------------------------------------------------------
+Test Passed.
+"schwarzschild_physics" end time: Jul 09 14:51 EDT
+"schwarzschild_physics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 09 14:51 EDT

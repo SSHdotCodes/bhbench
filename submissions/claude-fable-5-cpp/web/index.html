@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#030508">
+  <meta name="description" content="A browser-native Schwarzschild black hole laboratory with C++ WebAssembly dynamics and WebGPU geodesic ray tracing.">
+  <title>Event Horizon Laboratory</title>
+  <link rel="stylesheet" href="./styles.css?v=20260713b">
+</head>
+<body>
+  <main id="app" class="loading">
+    <canvas id="viewport" aria-label="Relativistic black hole simulation"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div id="aimOverlay" class="aim-overlay" aria-hidden="true">
+      <div class="aim-instruction"><small>INJECTION TARGETING</small><b>CLICK A POINT IN SPACETIME</b><span>Center the reticle on the horizon for a direct plunge · ESC to cancel</span></div>
+      <div class="aim-reticle"><i></i><span></span></div>
+      <div id="aimReadout" class="aim-readout">IMPACT PARAMETER 0.00 r<sub>g</sub></div>
+    </div>
+
+    <section id="boot" class="boot" aria-live="polite">
+      <div class="boot-mark"><span></span></div>
+      <p class="eyebrow">INITIALIZING SPACETIME</p>
+      <h1>EVENT HORIZON<br><i>LABORATORY</i></h1>
+      <div class="boot-line"><b id="bootProgress"></b></div>
+      <p id="bootStatus">Loading C++ relativity core…</p>
+    </section>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark"><span></span></div>
+        <div><strong>EVENT HORIZON</strong><small>RELATIVITY LAB / SCHWARZSCHILD</small></div>
+      </div>
+      <div class="top-readouts">
+        <div><small>BLACK HOLE</small><strong id="topMass">4.30M M☉</strong></div>
+        <div><small>HORIZON</small><strong id="topHorizon">12.70M km</strong></div>
+        <div><small>ENGINE</small><strong class="cyan"><i class="status-dot"></i><span id="engineName">WEBGPU</span></strong></div>
+      </div>
+      <div class="mode-switch" role="group" aria-label="Camera mode">
+        <button class="active" data-mode="observe"><span>01</span> OBSERVE</button>
+        <button data-mode="pilot"><span>02</span> PILOT</button>
+      </div>
+      <button id="panelToggle" class="panel-toggle" aria-label="Toggle controls">CONTROLS <span>⌁</span></button>
+    </header>
+
+    <aside id="panel" class="panel">
+      <div class="panel-head">
+        <div><p class="eyebrow">EXPERIMENT CONTROL</p><h2>Inject an object</h2></div>
+        <button id="panelClose" aria-label="Close controls">×</button>
+      </div>
+
+      <div class="object-types" role="radiogroup" aria-label="Object type">
+        <button class="object-type active" data-type="planet" role="radio" aria-checked="true">
+          <span class="object-icon planet-icon"></span><b>PLANET</b><small>Rock / gas</small>
+        </button>
+        <button class="object-type" data-type="star" role="radio" aria-checked="false">
+          <span class="object-icon star-icon"></span><b>STAR</b><small>Main sequence</small>
+        </button>
+        <button class="object-type" data-type="neutron" role="radio" aria-checked="false">
+          <span class="object-icon neutron-icon"></span><b>NEUTRON</b><small>Degenerate</small>
+        </button>
+        <button class="object-type" data-type="blackhole" role="radio" aria-checked="false">
+          <span class="object-icon blackhole-icon"></span><b>BLACK HOLE</b><small>Compact</small>
+        </button>
+      </div>
+
+      <div class="control-section">
+        <div class="section-title"><span>OBJECT PARAMETERS</span><small id="presetLabel">EARTH ANALOG</small></div>
+        <label class="field-row"><span>Mass <small id="massUnit">M⊕</small></span><input id="objectMass" type="number" min="0.01" step="0.1" value="1"><output id="objectMassOut">1.00</output></label>
+        <label class="field-row"><span>Radius <small>km</small></span><input id="objectRadius" type="range" min="1000" max="80000" step="100" value="6371"><output id="objectRadiusOut">6,371</output></label>
+        <label class="select-row"><span>Composition</span><select id="composition"><option value="0">Silicate + iron</option><option value="1">Hydrogen / helium</option><option value="2">Water / ice</option></select></label>
+      </div>
+
+      <div class="control-section">
+        <div class="section-title"><span>INJECTION VECTOR</span><small>LOCAL STATIC FRAME</small></div>
+        <label class="field-row"><span>Release radius <small>r<sub>g</sub></small></span><input id="spawnRadius" type="range" min="6.2" max="70" step="0.1" value="22"><output id="spawnRadiusOut">22.0</output></label>
+        <label class="field-row"><span>Launch speed</span><input id="orbitFactor" type="range" min="0.05" max="1.6" step="0.01" value="0.82"><output id="orbitFactorOut">82%</output></label>
+        <label class="field-row"><span>Tangential bias</span><input id="inwardFactor" type="range" min="-1" max="1" step="0.01" value="0"><output id="inwardFactorOut">0%</output></label>
+        <div class="trajectory-readout"><span><small>PREDICTED</small><b id="trajectoryType">PLUNGING ORBIT</b></span><span><small>LOCAL v</small><b id="injectionSpeed">58,400 km/s</b></span></div>
+      </div>
+
+      <button id="launchButton" class="launch-button"><span>INJECT INTO SPACETIME</span><i>↗</i></button>
+      <p class="panel-note">Objects are evolved by the C++ core in geometric units with pairwise companion gravity. Visual radii are amplified only for visibility; mass, trajectory, tidal limits, horizons, capture, and merger tests use physical values.</p>
+
+      <div class="control-section bh-control">
+        <div class="section-title"><span>CENTRAL MASS</span><small>NON-SPINNING</small></div>
+        <label class="mass-input"><input id="bhMass" type="number" min="3" max="100000000000" step="1000" value="4300000"><span>M☉</span></label>
+        <input id="bhMassSlider" class="wide-range" type="range" min="0" max="1" step="0.001" value="0.568" aria-label="Black hole mass logarithmic slider">
+        <div class="range-scale"><span>3 M☉</span><span>10¹¹ M☉</span></div>
+      </div>
+    </aside>
+
+    <section id="pilotHud" class="pilot-hud" aria-hidden="true">
+      <div class="helmet left"></div><div class="helmet right"></div>
+      <div class="pitch-ladder"><span>+20</span><i></i><span>+10</span><i></i><b></b><span>−10</span><i></i><span>−20</span></div>
+      <div class="reticle"><span></span><span></span><i></i></div>
+      <div class="hud-block hud-left">
+        <small>INERTIAL NAV</small><b id="hudVelocity">0.182 c</b><span id="hudVelocityKm">54,560 km/s</span>
+        <div class="hud-meter"><i id="thrustMeter"></i></div><em>ENGINE IMPULSE</em>
+      </div>
+      <div class="hud-block hud-right">
+        <small>RADIAL RANGE</small><b id="hudRadius">18.00 r<sub>g</sub></b><span id="hudProper">τ/t∞ 0.916</span>
+        <div class="hazard" id="hazardLabel">STABLE ORBIT</div>
+      </div>
+      <div class="flight-help"><b>WASD</b> thrust · <b>ARROWS</b> look · <b>Q / E</b> vertical · <b>R</b> circularize</div>
+    </section>
+
+    <section class="science-card" id="scienceCard">
+      <div class="card-index">LIVE<br>FRAME</div>
+      <div><small>OBSERVER RADIUS</small><strong id="observerRadius">26.00 r<sub>g</sub></strong><span id="observerKm">165.2 million km</span></div>
+      <div><small>GRAVITATIONAL DILATION</small><strong id="timeDilation">0.96077</strong><span>dτ / dt at rest</span></div>
+      <div><small>PHOTON SPHERE</small><strong>3.000 r<sub>g</sub></strong><span id="photonKm">19.06 million km</span></div>
+      <button id="scienceInfo" aria-label="Show scientific model notes">i</button>
+    </section>
+
+    <div id="eventFeed" class="event-feed" aria-live="polite"></div>
+
+    <footer class="transport">
+      <button id="playPause" class="play" aria-label="Pause simulation">Ⅱ</button>
+      <div class="time-control">
+        <div class="time-label"><span>TIME RATE</span><strong id="timeRateLabel">1× <small>REAL TIME</small></strong></div>
+        <input id="timeRate" type="range" min="0" max="8" step="0.01" value="0" aria-label="Simulation time rate logarithmic slider">
+        <div class="time-ticks"><span>1×</span><span>10²</span><span>10⁴</span><span>10⁶</span><span>10⁸</span></div>
+      </div>
+      <div class="sim-clock"><small>COORDINATE TIME</small><b id="simClock">T + 00:00:00</b></div>
+        <button id="qualityButton" class="quality-button"><small>TRACE QUALITY</small><b id="qualityLabel">HIGH / 192</b></button>
+    </footer>
+
+    <dialog id="scienceDialog">
+      <button class="dialog-close" aria-label="Close">×</button>
+      <p class="eyebrow">MODEL TRANSPARENCY</p>
+      <h2>What this laboratory computes</h2>
+      <div class="dialog-grid">
+        <article><b>LIGHT</b><p>Every visible pixel integrates a null geodesic through Schwarzschild spacetime. The shadow, photon ring, Einstein lensing, and higher-order disk images emerge from the path equation.</p></article>
+        <article><b>MATTER</b><p>The C++ WebAssembly core combines the primary's pseudo-relativistic strong field with pairwise, mass-scaled N-body gravity in the accelerating primary frame. Inside the physical tidal radius, bodies deform into leading and trailing ballistic streams; bound debris must wrap and self-intersect before it can feed a disk.</p></article>
+        <article><b>OBSERVER</b><p>Pilot velocity is inertial and capped below light speed. The HUD reports local speed, gravitational lapse, and combined proper-time rate. Visual sizes are amplified so small bodies remain visible.</p></article>
+        <article><b>LIMITS</b><p>The central object is non-spinning and uncharged. Companion interactions use softened weak-field gravity outside their horizons—not full multi-metric numerical relativity. Debris streams follow a real-time ballistic/circularization model and the resulting flow is a thin radiating disk; full 3D MHD, nuclear reactions, and numerical-relativity waveforms are outside this model.</p></article>
+      </div>
+    </dialog>
+  </main>
+  <noscript>This simulation requires JavaScript, WebAssembly, and a WebGPU-capable browser.</noscript>
+  <script type="module" src="./app.js?v=20260714a"></script>
+</body>
+</html>
