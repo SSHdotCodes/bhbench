@@ -16,7 +16,7 @@ The files inside `submissions/` are imported from the preserved submission folde
 | GPT-5.6 Sol | [`gpt-5.6-sol-xhigh-gargantua`](submissions/gpt-5.6-sol-xhigh-gargantua) | Gargantua variant by zoomx64 |
 | GLM 5.2 | [`glm-5.2`](submissions/glm-5.2) |  |
 | Qwen 3.8 Max | [`qwen-3.8-max`](submissions/qwen-3.8-max) |  |
-| Grok 4.5 | [`grok-4.5`](submissions/grok-4.5) |  |
+| Grok 4.6 | [`grok-4.6`](submissions/grok-4.6) | High reasoning, generated with Grok Build |
 | Claude Sonnet 5 | [`claude-sonnet-5`](submissions/claude-sonnet-5) |  |
 | GPT-5.6 Terra | [`gpt-5.6-terra-xhigh`](submissions/gpt-5.6-terra-xhigh) | xhigh reasoning result |
 | GPT-5.6 Luna | [`gpt-5.6-luna-xhigh`](submissions/gpt-5.6-luna-xhigh) | xhigh reasoning result |
@@ -26,6 +26,7 @@ The files inside `submissions/` are imported from the preserved submission folde
 | Kimi K3 | [`kimi-k3`](submissions/kimi-k3) |  |
 | Inkling | [`inkling`](submissions/inkling) |  |
 | Gemini 3.6 Flash | [`gemini-3.6-flash`](submissions/gemini-3.6-flash) |  |
+| Grok 4.5 | [`grok-4.5`](submissions/grok-4.5) | Previous-generation entry |
 | Claude Opus 4.8 | [`claude-opus-4.8`](submissions/claude-opus-4.8) | Previous-generation entry |
 | Muse Spark 1.1 | [`muse-spark-1.1`](submissions/muse-spark-1.1) | Previous-generation entry |
 | Qwen 3.8 Max Preview | [`qwen-3.8-max-preview`](submissions/qwen-3.8-max-preview) | Previous-generation entry |
