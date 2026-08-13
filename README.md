@@ -25,7 +25,8 @@ The files inside `submissions/` are imported from the preserved submission folde
 | Tencent HY3 | [`tencent-hy3`](submissions/tencent-hy3) |  |
 | Kimi K3 | [`kimi-k3`](submissions/kimi-k3) |  |
 | Inkling | [`inkling`](submissions/inkling) |  |
-| Gemini 3.6 Flash | [`gemini-3.6-flash`](submissions/gemini-3.6-flash) |  |
+| Gemini 3.7 Flash | [`gemini-3.7-flash`](submissions/gemini-3.7-flash) | Generated with OpenCode |
+| Gemini 3.6 Flash | [`gemini-3.6-flash`](submissions/gemini-3.6-flash) | Previous-generation entry |
 | Grok 4.5 | [`grok-4.5`](submissions/grok-4.5) | Previous-generation entry |
 | Claude Opus 4.8 | [`claude-opus-4.8`](submissions/claude-opus-4.8) | Previous-generation entry |
 | Muse Spark 1.1 | [`muse-spark-1.1`](submissions/muse-spark-1.1) | Previous-generation entry |
