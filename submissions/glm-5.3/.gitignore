@@ -1,0 +1,3 @@
+build/
+screenshots/*.bmp
+.DS_Store

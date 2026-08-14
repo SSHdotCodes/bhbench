@@ -14,6 +14,7 @@ The files inside `submissions/` are imported from the preserved submission folde
 | GPT-5.6 Sol | [`gpt-5.6-sol-xhigh`](submissions/gpt-5.6-sol-xhigh) | xhigh reasoning result |
 | GPT-5.6 Sol | [`gpt-5.6-sol-ultra`](submissions/gpt-5.6-sol-ultra) | ultra reasoning result |
 | GPT-5.6 Sol | [`gpt-5.6-sol-xhigh-gargantua`](submissions/gpt-5.6-sol-xhigh-gargantua) | Gargantua variant by zoomx64 |
+| GLM 5.3 | [`glm-5.3`](submissions/glm-5.3) | max reasoning, generated with OpenCode |
 | GLM 5.2 | [`glm-5.2`](submissions/glm-5.2) |  |
 | Qwen 3.8 Max | [`qwen-3.8-max`](submissions/qwen-3.8-max) |  |
 | Grok 4.6 | [`grok-4.6`](submissions/grok-4.6) | High reasoning, generated with Grok Build |
