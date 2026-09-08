@@ -1,0 +1,4 @@
+build/
+work/
+captures/snapshot-*.png
+.DS_Store

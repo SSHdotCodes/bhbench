@@ -1,0 +1,12 @@
+GPU: Apple M4 Max
+OpenGL: 4.1 Metal - 91.7
+GPU / CPU null-geodesic comparison (OpenGL RGBA32F readback)
+PASS b=5.15 captured=1 escaped=0 deflection_error=0.0027634772 rad, invariant_error=5.8005855e-07
+PASS b=5.19 captured=1 escaped=0 deflection_error=0.00041192302 rad, invariant_error=8.2984593e-07
+PASS b=5.2 captured=0 escaped=1 deflection_error=0.0001707884 rad, invariant_error=1.2903699e-06
+PASS b=5.25 captured=0 escaped=1 deflection_error=1.9835326e-05 rad, invariant_error=1.5264377e-06
+PASS b=6 captured=0 escaped=1 deflection_error=1.7817706e-05 rad, invariant_error=4.0978193e-07
+PASS b=10 captured=0 escaped=1 deflection_error=8.6036968e-06 rad, invariant_error=7.674098e-07
+PASS b=20 captured=0 escaped=1 deflection_error=6.1036811e-06 rad, invariant_error=5.364418e-07
+PASS b=50 captured=0 escaped=1 deflection_error=5.1713184e-06 rad, invariant_error=5.5681448e-07
+BENCHMARK 590 frames / 5.19617 sec = 113.545 FPS, 1095x640 rays, quality=1, view=0

@@ -1,0 +1,45 @@
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build
+[ 33%] Built target physics-tests
+[ 50%] Building CXX object CMakeFiles/black-hole.dir/src/main.cpp.o
+[ 66%] Linking CXX executable black-hole
+[100%] Built target black-hole
+Test project /Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build
+    Start 1: schwarzschild-physics
+1/1 Test #1: schwarzschild-physics ............   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+GPU: Apple M4 Max
+OpenGL: 4.1 Metal - 91.7
+GPU / CPU null-geodesic comparison (OpenGL RGBA32F readback)
+Angular step cap: 0.045000002 rad
+PASS b=5.15 captured=1 escaped=0 deflection_error=0.014279571 rad, invariant_error=3.0917761e-07
+PASS b=5.19 captured=1 escaped=0 deflection_error=0.011171277 rad, invariant_error=9.763603e-07
+PASS b=5.2 captured=0 escaped=1 deflection_error=0.00026694811 rad, invariant_error=7.242669e-07
+PASS b=5.25 captured=0 escaped=1 deflection_error=3.3186766e-05 rad, invariant_error=1.0130461e-06
+PASS b=6 captured=0 escaped=1 deflection_error=3.9894289e-06 rad, invariant_error=9.3132257e-07
+PASS b=10 captured=0 escaped=1 deflection_error=1.689558e-06 rad, invariant_error=3.9488077e-07
+PASS b=20 captured=0 escaped=1 deflection_error=3.8163521e-07 rad, invariant_error=9.5367432e-07
+PASS b=50 captured=0 escaped=1 deflection_error=6.4136537e-07 rad, invariant_error=6.2957406e-07
+Angular step cap: 0.025 rad
+PASS b=5.15 captured=1 escaped=0 deflection_error=0.010439602 rad, invariant_error=1.1984138e-06
+PASS b=5.19 captured=1 escaped=0 deflection_error=0.0059260679 rad, invariant_error=5.7498113e-07
+PASS b=5.2 captured=0 escaped=1 deflection_error=0.00045959032 rad, invariant_error=7.242669e-07
+PASS b=5.25 captured=0 escaped=1 deflection_error=3.3186766e-05 rad, invariant_error=1.8344726e-06
+PASS b=6 captured=0 escaped=1 deflection_error=8.2809633e-06 rad, invariant_error=6.1094761e-07
+PASS b=10 captured=0 escaped=1 deflection_error=3.5969066e-06 rad, invariant_error=3.9488077e-07
+PASS b=20 captured=0 escaped=1 deflection_error=3.2426582e-06 rad, invariant_error=4.8801303e-07
+PASS b=50 captured=0 escaped=1 deflection_error=2.7871326e-06 rad, invariant_error=9.2061237e-07
+Angular step cap: 0.012 rad
+PASS b=5.15 captured=1 escaped=0 deflection_error=0.0027634772 rad, invariant_error=5.8005855e-07
+PASS b=5.19 captured=1 escaped=0 deflection_error=0.00041192302 rad, invariant_error=8.2984593e-07
+PASS b=5.2 captured=0 escaped=1 deflection_error=0.0001707884 rad, invariant_error=1.2903699e-06
+PASS b=5.25 captured=0 escaped=1 deflection_error=1.9835326e-05 rad, invariant_error=1.5264377e-06
+PASS b=6 captured=0 escaped=1 deflection_error=1.7817706e-05 rad, invariant_error=4.0978193e-07
+PASS b=10 captured=0 escaped=1 deflection_error=8.6036968e-06 rad, invariant_error=7.674098e-07
+PASS b=20 captured=0 escaped=1 deflection_error=6.1036811e-06 rad, invariant_error=5.364418e-07
+PASS b=50 captured=0 escaped=1 deflection_error=5.1713184e-06 rad, invariant_error=5.5681448e-07
+PASS Perspective camera: 0 / 1000 capture mismatches; max impact error=3.4306047e-06 M at pixel 891, b=15.824741

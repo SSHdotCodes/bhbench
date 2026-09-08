@@ -8,6 +8,8 @@ The files inside `submissions/` are imported from the preserved submission folde
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| GPT 6 Astra | [`gpt-6-astra-xhigh`](submissions/gpt-6-astra-xhigh) | xhigh reasoning, generated with Codex |
+| Claude Fable 5.1 | [`claude-fable-5.1`](submissions/claude-fable-5.1) | xhigh reasoning, generated with Claude Code |
 | Claude Fable 5 | [`claude-fable-5-cpp`](submissions/claude-fable-5-cpp) | Default C++ result |
 | Claude Fable 5 | [`claude-fable-5-python`](submissions/claude-fable-5-python) | Published Python variant |
 | Claude Opus 5 | [`claude-opus-5`](submissions/claude-opus-5) |  |
@@ -15,17 +17,23 @@ The files inside `submissions/` are imported from the preserved submission folde
 | GPT-5.6 Sol | [`gpt-5.6-sol-ultra`](submissions/gpt-5.6-sol-ultra) | ultra reasoning result |
 | GPT-5.6 Sol | [`gpt-5.6-sol-xhigh-gargantua`](submissions/gpt-5.6-sol-xhigh-gargantua) | Gargantua variant by zoomx64 |
 | GLM 5.3 | [`glm-5.3`](submissions/glm-5.3) | max reasoning, generated with OpenCode |
+| GLM 5.3 Flash | [`glm-5.3-flash`](submissions/glm-5.3-flash) | Originally submitted as ox-alpha; max reasoning, generated with OpenCode |
 | GLM 5.2 | [`glm-5.2`](submissions/glm-5.2) |  |
+| Qwen 3.8 Max 0902 | [`qwen-3.8-max-0902`](submissions/qwen-3.8-max-0902) | Generated with OpenCode |
+| Qwen 3.8 Flash Next (NVFP4) | [`qwen-3.8-flash-next-nvfp4`](submissions/qwen-3.8-flash-next-nvfp4) | Final standalone local generation with OpenCode |
 | Qwen 3.8 Max | [`qwen-3.8-max`](submissions/qwen-3.8-max) |  |
 | Grok 4.6 | [`grok-4.6`](submissions/grok-4.6) | High reasoning, generated with Grok Build |
 | Claude Sonnet 5 | [`claude-sonnet-5`](submissions/claude-sonnet-5) |  |
 | GPT-5.6 Terra | [`gpt-5.6-terra-xhigh`](submissions/gpt-5.6-terra-xhigh) | xhigh reasoning result |
 | GPT-5.6 Luna | [`gpt-5.6-luna-xhigh`](submissions/gpt-5.6-luna-xhigh) | xhigh reasoning result |
+| Muse Spark 1.3 | [`muse-spark-1.3-xhigh`](submissions/muse-spark-1.3-xhigh) | xhigh reasoning, generated with Muse Code |
+| Muse Spark 1.3 Max | [`muse-spark-1.3-max`](submissions/muse-spark-1.3-max) | max reasoning, generated with Muse Code |
 | Muse Spark 1.2 | [`muse-spark-1.2`](submissions/muse-spark-1.2) |  |
 | Composer 2.5 | [`composer-2.5`](submissions/composer-2.5) |  |
 | Tencent HY3 | [`tencent-hy3`](submissions/tencent-hy3) |  |
 | Kimi K3 | [`kimi-k3`](submissions/kimi-k3) |  |
 | Inkling | [`inkling`](submissions/inkling) |  |
+| Gemini 3.8 Flash | [`gemini-3.8-flash`](submissions/gemini-3.8-flash) | Original C++/Metal project, generated with OpenCode |
 | Gemini 3.7 Flash | [`gemini-3.7-flash`](submissions/gemini-3.7-flash) | Generated with OpenCode |
 | Gemini 3.6 Flash | [`gemini-3.6-flash`](submissions/gemini-3.6-flash) | Previous-generation entry |
 | Grok 4.5 | [`grok-4.5`](submissions/grok-4.5) | Previous-generation entry |

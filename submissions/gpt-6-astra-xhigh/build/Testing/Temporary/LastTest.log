@@ -1,0 +1,35 @@
+Start testing: Sep 04 15:32 EDT
+----------------------------------------------------------
+1/1 Testing: schwarzschild-physics
+1/1 Test: schwarzschild-physics
+Command: "/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/physics-tests"
+Directory: /Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build
+"schwarzschild-physics" start time: Sep 04 15:32 EDT
+Output:
+----------------------------------------------------------
+PASS Capture separatrix b = 3 sqrt(3) M (error=0)
+PASS Unstable circular photon orbit at 3M (error=0)
+PASS Conserved null invariant, b=5.200000 (error=6.27037858e-11)
+PASS Conserved null invariant, b=6.000000 (error=5.89495674e-11)
+PASS Conserved null invariant, b=10.000000 (error=4.27382574e-11)
+PASS Conserved null invariant, b=30.000000 (error=1.81436255e-11)
+PASS Weak deflection through fourth order in M/b (error=2.29034336e-09)
+PASS Flat-space control follows a straight line (error=2.10231832e-12)
+PASS Fourth-order geodesic convergence (error=2.40303599e-09)
+PASS Embedding reproduces Schwarzschild spatial metric (error=6.33377795e-11)
+PASS Transverse + gravitational redshift at ISCO (error=0)
+PASS Approaching material is blueshifted relative to receding material (error=0)
+PASS Zero-torque disk boundary at 6M (error=0)
+PASS Relativistic flux peaks outside Newtonian peak (error=9.551)
+Flux normalization = 0.000171884209827 at r=9.551
+PASS Coordinate orbital period at ISCO (error=5.42144107e-11)
+ALL PHYSICS CHECKS PASSED
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"schwarzschild-physics" end time: Sep 04 15:32 EDT
+"schwarzschild-physics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 04 15:32 EDT

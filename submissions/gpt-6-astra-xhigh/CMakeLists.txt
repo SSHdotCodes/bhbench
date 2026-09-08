@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.20)
+project(BlackHoleAstra6 VERSION 1.0 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(OpenGL REQUIRED)
+find_package(PNG REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLFW REQUIRED IMPORTED_TARGET glfw3)
+pkg_check_modules(FREETYPE REQUIRED IMPORTED_TARGET freetype2)
+add_executable(black-hole src/main.cpp src/ui.cpp src/graphics.cpp)
+target_include_directories(black-hole PRIVATE include)
+target_compile_definitions(black-hole PRIVATE GL_SILENCE_DEPRECATION BH_ROOT="${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_options(black-hole PRIVATE -Wall -Wextra -Wpedantic)
+target_link_libraries(black-hole PRIVATE OpenGL::GL PkgConfig::GLFW PkgConfig::FREETYPE PNG::PNG)
+if(APPLE)
+  set(BH_APP "${CMAKE_CURRENT_SOURCE_DIR}/Astra Black Hole.app")
+  add_custom_command(TARGET black-hole POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory "${BH_APP}/Contents/MacOS"
+    COMMAND ${CMAKE_COMMAND} -E copy "$<TARGET_FILE:black-hole>" "${BH_APP}/Contents/MacOS/AstraBlackHole"
+    COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_SOURCE_DIR}/Info.plist" "${BH_APP}/Contents/Info.plist"
+    VERBATIM)
+endif()
+add_executable(physics-tests tests/physics_tests.cpp)
+target_include_directories(physics-tests PRIVATE include)
+target_compile_options(physics-tests PRIVATE -Wall -Wextra -Wpedantic)
+enable_testing()
+add_test(NAME schwarzschild-physics COMMAND physics-tests)

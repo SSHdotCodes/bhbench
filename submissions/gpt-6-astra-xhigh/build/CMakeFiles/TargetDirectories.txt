@@ -1,0 +1,5 @@
+/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/CMakeFiles/black-hole.dir
+/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/CMakeFiles/physics-tests.dir
+/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/CMakeFiles/test.dir
+/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/CMakeFiles/edit_cache.dir
+/Users/sshpro/Documents/Codex/2026-09-04/make-a-highly-scientifically-accurate-3d/outputs/black-hole-cpp-astra6/build/CMakeFiles/rebuild_cache.dir
