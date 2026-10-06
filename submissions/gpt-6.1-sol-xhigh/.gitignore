@@ -1,0 +1,4 @@
+build/
+Black Hole.app/
+captures/*.ppm
+captures/black-hole-*.ppm

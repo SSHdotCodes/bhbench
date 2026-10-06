@@ -1,0 +1,79 @@
+== 1. initial-data constraints
+  [double] null-condition residual 1.87e-15, angular-constant residual 9.14e-16
+  [float] null-condition residual 9.92e-07, angular-constant residual 4.41e-07
+== 2. Schwarzschild deflection (camera at r = 1000 M)
+ -- double, step sizes x0.2 (convergence: RK4 error should drop ~625x)
+  [double] b =    5.4 M: swept 6.055588963 rad (exact 6.055588967), error 3.83e-09 rad, 359 steps
+  [double] b =    6.0 M: swept 4.854980925 rad (exact 4.854980928), error 3.12e-09 rad, 288 steps
+  [double] b =    8.0 M: swept 3.992322584 rad (exact 3.992322586), error 2.59e-09 rad, 230 steps
+  [double] b =   12.0 M: swept 3.582197777 rad (exact 3.582197779), error 1.97e-09 rad, 198 steps
+  [double] b =   20.0 M: swept 3.357727316 rad (exact 3.357727317), error 1.36e-09 rad, 179 steps
+  [double] b =   50.0 M: swept 3.176655278 rad (exact 3.176655278), error 6.12e-10 rad, 163 steps
+  [double] b =  150.0 M: swept 3.018228497 rad (exact 3.018228497), error 2.10e-10 rad, 153 steps
+  [double] b =  400.0 M: swept 2.740169120 rad (exact 2.740169120), error 9.36e-11 rad, 138 steps
+ -- float, production step sizes (GPU configuration)
+  [float] b =    5.4 M: swept 6.055586678 rad (exact 6.055588967), error 2.29e-06 rad, 72 steps
+  [float] b =    6.0 M: swept 4.854979601 rad (exact 4.854980928), error 1.33e-06 rad, 58 steps
+  [float] b =    8.0 M: swept 3.992320892 rad (exact 3.992322586), error 1.69e-06 rad, 46 steps
+  [float] b =   12.0 M: swept 3.582196451 rad (exact 3.582197779), error 1.33e-06 rad, 40 steps
+  [float] b =   20.0 M: swept 3.357726506 rad (exact 3.357727317), error 8.11e-07 rad, 36 steps
+  [float] b =   50.0 M: swept 3.176654959 rad (exact 3.176655278), error 3.19e-07 rad, 33 steps
+  [float] b =  150.0 M: swept 3.018228187 rad (exact 3.018228497), error 3.10e-07 rad, 31 steps
+  [float] b =  400.0 M: swept 2.740169098 rad (exact 2.740169120), error 2.28e-08 rad, 28 steps
+== 3. Schwarzschild shadow radius
+  [double] r_obs =   4.0 M: shadow radius 1.16441855 rad (exact 1.16441855), rel. error 8.3e-11
+  [double] r_obs =   6.0 M: shadow radius 0.78539816 rad (exact 0.78539816), rel. error 1.6e-10
+  [double] r_obs =  10.0 M: shadow radius 0.48336128 rad (exact 0.48336128), rel. error 1.5e-10
+  [double] r_obs =  30.0 M: shadow radius 0.16812289 rad (exact 0.16812289), rel. error 4.7e-11
+  [double] r_obs = 100.0 M: shadow radius 0.05146200 rad (exact 0.05146200), rel. error 2.2e-11
+  [float] r_obs =   4.0 M: shadow radius 1.16441869 rad (exact 1.16441855), rel. error 1.2e-07
+  [float] r_obs =   6.0 M: shadow radius 0.78539839 rad (exact 0.78539816), rel. error 2.9e-07
+  [float] r_obs =  10.0 M: shadow radius 0.48336140 rad (exact 0.48336128), rel. error 2.4e-07
+  [float] r_obs =  30.0 M: shadow radius 0.16812292 rad (exact 0.16812289), rel. error 1.7e-07
+  [float] r_obs = 100.0 M: shadow radius 0.05146199 rad (exact 0.05146200), rel. error 6.5e-08
+== 4/6. Kerr capture vs Bardeen critical curve; early-capture rule
+  [double] 19999 rays: 0 disagree with the Bardeen critical curve, 0 hit max steps, early-capture rule changed 0 outcomes
+  [float] 19988 rays: 0 disagree with the Bardeen critical curve, 0 hit max steps, early-capture rule changed 0 outcomes
+== 5. independent Boyer–Lindquist Hamiltonian integrator (DP45, double)
+ -- double, step sizes x0.2
+  [double] 300 rays vs BL/DP45 reference: direction error median 1.85e-09 max 3.76e-09 rad; disk-plane radius rel. error median 2.23e-10 max 3.51e-08 (291 crossings)
+       worst crossing: r_cam=18.793528 th_cam=86.891215 a=0.998000 cross r=212.050808 (core 212.050815)
+ -- double / float, production step sizes
+  [double] 300 rays vs BL/DP45 reference: direction error median 1.14e-06 max 1.85e-06 rad; disk-plane radius rel. error median 1.21e-07 max 2.12e-05 (291 crossings)
+       worst crossing: r_cam=18.793528 th_cam=86.891215 a=0.998000 cross r=212.050808 (core 212.055302)
+  [float] 300 rays vs BL/DP45 reference: direction error median 1.27e-06 max 4.43e-06 rad; disk-plane radius rel. error median 2.00e-07 max 2.42e-05 (291 crossings)
+       worst crossing: r_cam=18.793528 th_cam=86.891215 a=0.998000 cross r=212.051121 (core 212.056244)
+== 7. circular orbits
+  a = +0.000: r+ = 2.00000  r_isco = 6.00000  r_ph = 3.00000 / 3.00000  efficiency η = 0.0572
+  a = +0.300: r+ = 1.95394  r_isco = 4.97862  r_ph = 2.63003 / 3.32885  efficiency η = 0.0694
+  a = +0.700: r+ = 1.71414  r_isco = 3.39313  r_ph = 2.01333 / 3.72535  efficiency η = 0.1036
+  a = +0.900: r+ = 1.43589  r_isco = 2.32088  r_ph = 1.55785 / 3.91027  efficiency η = 0.1558
+  a = +0.990: r+ = 1.14107  r_isco = 1.45450  r_ph = 1.16764 / 3.99110  efficiency η = 0.2640
+  a = +0.998: r+ = 1.06321  r_isco = 1.23697  r_ph = 1.07391 / 3.99822  efficiency η = 0.3210
+  a = -0.500: r+ = 1.86603  r_isco = 7.55458  r_ph = 2.34730 / 3.53209  efficiency η = 0.0451
+  a = -0.900: r+ = 1.43589  r_isco = 8.71735  r_ph = 1.55785 / 3.91027  efficiency η = 0.0390
+== 8. Novikov–Thorne disk
+  NT flux (a=0) table vs closed form: max rel. error 2.99e-05; peak at r = 9.550 M (F̃max = 1.3678e-05)
+  a = +0.000: ∫4πrEF dr = 0.057191 vs η = 0.057191
+  a = +0.500: ∫4πrEF dr = 0.082118 vs η = 0.082118
+  a = +0.900: ∫4πrEF dr = 0.155753 vs η = 0.155753
+  a = +0.998: ∫4πrEF dr = 0.320994 vs η = 0.320994
+  a = -0.500: ∫4πrEF dr = 0.045142 vs η = 0.045142
+== 9. embedding diagram
+  Flamm paraboloid: max rel. error 6.47e-13
+  Kerr a=0.500 equatorial embedding: throat R = 2.0000, depth 15.132 M, non-embeddable samples 0
+  Kerr a=0.900 equatorial embedding: throat R = 2.0000, depth 15.877 M, non-embeddable samples 0
+  Kerr a=0.998 equatorial embedding: throat R = 2.0000, depth 17.832 M, non-embeddable samples 0
+== 10. blackbody colorimetry
+  blackbody sRGB (max-normalised): 3000 K (1.000 0.484 0.155)  6504 K (1.000 0.945 0.994)  20000 K (0.407 0.536 1.000)
+
+85 checks passed, 0 failed
+PASS cube-map face convention: all 384 texels round-trip
+PASS GPU vs CPU core [a=0.90 classic view]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 5.4e-04 rad, worst disk-hit 2.4e-05
+PASS GPU vs CPU core [a=0.998 edge-on]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 1.1e-06 rad, worst disk-hit 3.8e-06
+PASS GPU vs CPU core [a=0 face-on]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 2.5e-04 rad, worst disk-hit 1.3e-04
+PASS GPU vs CPU core [a=-0.6 close-up]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 3.0e-04 rad, worst disk-hit 6.8e-05
+PASS GPU vs CPU core [a=0.9 orbiting observer]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 1.3e-04 rad, worst disk-hit 5.1e-05
+PASS GPU vs CPU core [a=0.9 infalling observer]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 1.1e-04 rad, worst disk-hit 2.3e-05
+PASS GPU vs CPU core [flat space]: 16000 px, 0 status + 0 value mismatches (0.000%), worst sky-dir 7.9e-07 rad, worst disk-hit 4.2e-06
+SELF-TEST PASSED
