@@ -4,6 +4,10 @@ This repository contains the preserved model-generated projects behind [bhbench.
 
 The files inside `submissions/` are imported from the preserved submission folders without source edits. The repository-level README, ignore file, and checksum manifest are organizational metadata added for this archive. Nested Git metadata and macOS `.DS_Store` files are not included.
 
+## Live browser adaptations
+
+The ten newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
+
 ## Current models
 
 | Benchmark entry | Folder | Notes |
@@ -18,8 +22,6 @@ The files inside `submissions/` are imported from the preserved submission folde
 | MiMo V2.6 Flash | [`mimo-v2.6-flash`](submissions/mimo-v2.6-flash) | OpenCode; Default reasoning; local model run |
 | Qwen 3.8 27B | [`qwen-3.8-27b`](submissions/qwen-3.8-27b) | OpenCode; Default reasoning; local model run |
 | DeepSeek V4 Flash | [`deepseek-v4-flash`](submissions/deepseek-v4-flash) | OpenCode; Default reasoning |
-| Qwen AgentWorld 35B A3B | [`qwen-agentworld-35b-a3b`](submissions/qwen-agentworld-35b-a3b) | OpenCode; Default reasoning; local model run |
-| Ornith 1.0 35B | [`ornith-1.0-35b`](submissions/ornith-1.0-35b) | Native render unavailable; original source preserved; local model run |
 | Ling 3.0 Flash | [`ling-3.0-flash`](submissions/ling-3.0-flash) | Native render unavailable; original source preserved |
 | GPT 6 Astra | [`gpt-6-astra-xhigh`](submissions/gpt-6-astra-xhigh) | xhigh reasoning, generated with Codex |
 | Claude Fable 5.1 | [`claude-fable-5.1`](submissions/claude-fable-5.1) | xhigh reasoning, generated with Claude Code |

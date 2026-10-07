@@ -18,7 +18,6 @@
     "qwen38flashnext",
     "qwen3827b",
     "deepseek4",
-    "agentworld",
     "terraxhigh",
     "muse13",
     "composer",
@@ -26,7 +25,6 @@
     "kimi",
     "inkling",
     "gemini38",
-    "ornith",
     "ling30"
   ],
   "oldModelIds": [
@@ -129,16 +127,6 @@
       "record": "July 31, 2026. Saved OpenCode session ses_04901211cffewPSVtNdOy88uWN identifies deepseek/deepseek-v4-flash. The native framebuffer was captured on October 6 without source edits. A later harness test is not a separate model entry."
     },
     {
-      "id": "agentworld",
-      "name": "Qwen AgentWorld 35B A3B",
-      "provider": "Alibaba",
-      "folder": "qwen-agentworld-35b-a3b",
-      "harness": "OpenCode",
-      "reasoning": "Default",
-      "local": true,
-      "record": "June 24, 2026. Saved OpenCode generation identifies llama.cpp/qwen-agentworld-35b-a3b-q8_0. Native framebuffer captured from the unchanged submission. Local Q8_0 inference; no API charge is estimated."
-    },
-    {
       "id": "sol6",
       "name": "GPT 6 Sol",
       "provider": "OpenAI",
@@ -158,18 +146,6 @@
       "reasoning": "Default",
       "old": true,
       "record": "July 30, 2026. Saved OpenCode session ses_04e7f7f5affeo6KCTTsWpFqC64 identifies openrouter/qwen/qwen3.7-flash. The native framebuffer was captured without source edits. Preserved in old models alongside newer Qwen Flash results."
-    },
-    {
-      "id": "ornith",
-      "name": "Ornith 1.0 35B",
-      "provider": "Ornith",
-      "folder": "ornith-1.0-35b",
-      "harness": "OpenCode",
-      "reasoning": "Default",
-      "local": true,
-      "failed": true,
-      "record": "June 29, 2026. Saved OpenCode session ses_0ed5a7303ffeo5S4KWjzXkG4Gs identifies lmstudio/ornith-1.0-35b. The native executable starts, but the submitted fragment shader fails compilation on Apple M4 Max. Source preserved without repairs.",
-      "failLog": "Fragment shader compile failed: undeclared identifiers invR, orbDir, photonInDisk, dopplerDot and dopplerFactor. Shader link failed: attached shaders not successfully compiled."
     },
     {
       "id": "ling30",
