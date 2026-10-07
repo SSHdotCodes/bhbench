@@ -8,6 +8,7 @@ The files inside `submissions/` are imported from the preserved submission folde
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Claude Haiku 5.5 | [`claude-haiku-5.5-xhigh`](submissions/claude-haiku-5.5-xhigh) | Claude Code; xhigh reasoning; original C++/Metal render; 25 physics checks passed |
 | Claude Opus 5.5 | [`claude-opus-5.5`](submissions/claude-opus-5.5) | Preserved C++/Metal source already published on the live site |
 | GPT 6.1 Sol | [`gpt-6.1-sol-xhigh`](submissions/gpt-6.1-sol-xhigh) | Codex; xhigh reasoning |
 | Claude Sonnet 5.5 | [`claude-sonnet-5.5-xhigh`](submissions/claude-sonnet-5.5-xhigh) | Claude Code; xhigh reasoning |
@@ -75,3 +76,7 @@ Build and runtime requirements differ by submission. Consult the README and buil
 ## October 6, 2026 refresh
 
 Added 13 distinct model submissions and the missing Claude Opus 5.5 source. Separate quantization and harness experiments of existing models are not additional entries. New imports preserve source, assets, tests and build instructions; generated CMake build directories and nested Git metadata are excluded. Failed native rendering is recorded without repairing the model output. [Catalog metadata](catalog.json) records the new submissions and current/old grouping.
+
+## October 7, 2026 addition
+
+Added Claude Haiku 5.5 from the original Claude Code run at xhigh effort. Its complete submitted project, seven renders and existing binaries are preserved without source or shader edits. The native validation executable passed all 25 physics checks. The distinct-model catalog now has 26 current models and 17 old models.

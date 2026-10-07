@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "site": "https://bhbench.ssh.codes",
   "currentModelIds": [
     "sol61",
@@ -7,6 +7,7 @@
     "sonnet55",
     "fable51",
     "opus55",
+    "haiku55",
     "luna6",
     "grok47",
     "mistral4",
@@ -180,6 +181,17 @@
       "failed": true,
       "record": "July 23, 2026. Saved OpenCode session ses_06f091cceffe7Ld7mL9RoYiwTy identifies openrouter/inclusionai/ling-3.0-flash:free. The preserved native executable exits before producing a framebuffer capture. No working render is claimed; source remains unchanged.",
       "failLog": "The submitted native executable exited with signal 11 before producing a framebuffer capture on Apple M4 Max."
+    },
+    {
+      "id": "haiku55",
+      "name": "Claude Haiku 5.5",
+      "provider": "Anthropic",
+      "folder": "claude-haiku-5.5-xhigh",
+      "harness": "Claude Code",
+      "reasoning": "xhigh",
+      "outputTokens": 312864,
+      "sessionId": "12211cc2-24a0-4288-9df2-ab9209602e4c",
+      "record": "October 7, 2026. Claude Code 2.1.293 session 12211cc2-24a0-4288-9df2-ab9209602e4c records claude-haiku-5-5 at xhigh effort throughout generation. 83 model responses, counted once per response: 312,864 output tokens, 166 uncached input tokens, 25,042,271 cache-read input tokens and 384,944 cache-write input tokens. The original native Metal image and all seven submitted renders are preserved. The submitted physics executable passed 25 checks on October 7. No source or shader repairs were made. API-equivalent cost is unavailable without verified Haiku 5.5 pricing."
     }
   ]
 }
