@@ -186,7 +186,7 @@ in vec2 vUV; out vec4 fragColor;
 
 void main(){
 vec2 nd = vUV * 2.0 - 1.0;
-    
+
 
     vec3 cp  = vec3(U.cam_x, U.cam_y, U.cam_z);
     vec3 fwd = normalize(vec3(U.fwd_x, U.fwd_y, U.fwd_z));

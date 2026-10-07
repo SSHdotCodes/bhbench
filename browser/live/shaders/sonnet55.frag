@@ -272,7 +272,7 @@ void escape_direction(float a, Ray  y, inout float dx, inout float dy, inout flo
     float ar = -d.u;                               // (dr/ds) u^2 = -du/ds
     float at = (-d.mu / st) * y.u;                 // r dtheta/ds * u^2 = dtheta/ds * u
     float ap = st * d.phi * y.u;                   // r sin(theta) dphi/ds * u^2
-    
+
     float n = sqrt(ar * ar + at * at + ap * ap);
     ar /= n; at /= n; ap /= n;
     dx = ar * st * cp + at * ct * cp - ap * sp;
@@ -755,7 +755,7 @@ void main(){
 
     float a = U.bh.x;
     vec2 ndc = vUV * 2.0 - 1.0;
-    
+
     float th = U.cam.w;
     float aspect = float(W) / float(H);
     vec3 n = normalize(vec3(ndc.x * aspect * th, ndc.y * th, 1.0));   // (right, up, forward)

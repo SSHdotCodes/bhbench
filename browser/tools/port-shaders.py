@@ -156,3 +156,7 @@ for mid,sampler in [('grok47','uFluxTex'),('mimo26flash','uBB')]:
 }
 """
     k=s.index('\n',s.index('precision highp int;'))+1;p.write_text(s[:k]+helper+s[k:])
+
+# Keep the generated adaptations free of trailing whitespace.
+for p in DST.glob('*.frag'):
+    p.write_text(''.join(line.rstrip()+'\n' for line in p.read_text().splitlines()))
