@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-09",
   "site": "https://bhbench.ssh.codes",
   "currentModelIds": [
     "sol61",
@@ -10,6 +10,7 @@
     "haiku55",
     "luna6",
     "grok47",
+    "step5",
     "mistral4",
     "mimo26flash",
     "glm53",
@@ -47,6 +48,19 @@
     "qwen37flash"
   ],
   "newSubmissions": [
+    {
+      "id": "step5",
+      "name": "StepFun 5 Preview",
+      "provider": "StepFun",
+      "folder": "stepfun-5-preview-high",
+      "harness": "OpenCode",
+      "reasoning": "high",
+      "outputTokens": 134619,
+      "cost": "Unavailable",
+      "rate": "Free preview endpoint",
+      "recordNote": "October 9, 2026. OpenCode 2.0.26 exported session ses_ede3a7ec0ffeXAjh8f0Ca34wUw records opencode-go/step-5-preview-free with high reasoning in all 121 assistant responses. Counted once per response: 55,414 text/tool output tokens + 79,205 reasoning tokens = 134,619 output tokens; 1,302,516 uncached input tokens and 13,411,264 cache-read tokens. Session aggregates additionally include 17 output and 665 input tokens outside those assistant responses. The free preview endpoint was used; billing and published API-equivalent rates are not verified. Original C++/OpenGL source and four native captures are preserved without repairs. The browser uses the submitted ray tracer and all four scenes, with a single-pass adaptation of native bloom. Its native steady-state HDR attenuation is retained; Raw samples corresponds to the original --single flag. Native warmup and temporal jitter are omitted.",
+      "record": "October 9, 2026. OpenCode 2.0.26 exported session ses_ede3a7ec0ffeXAjh8f0Ca34wUw records opencode-go/step-5-preview-free with high reasoning in all 121 assistant responses. Counted once per response: 55,414 text/tool output tokens + 79,205 reasoning tokens = 134,619 output tokens; 1,302,516 uncached input tokens and 13,411,264 cache-read tokens. Session aggregates additionally include 17 output and 665 input tokens outside those assistant responses. The free preview endpoint was used; billing and published API-equivalent rates are not verified. Original C++/OpenGL source and four native captures are preserved without repairs. The browser uses the submitted ray tracer and all four scenes, with a single-pass adaptation of native bloom. Its native steady-state HDR attenuation is retained; Raw samples corresponds to the original --single flag. Native warmup and temporal jitter are omitted."
+    },
     {
       "id": "sol61",
       "name": "GPT 6.1 Sol",

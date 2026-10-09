@@ -4,6 +4,7 @@ These ports make the successful recent additions interactive on [BHBench](https:
 
 | Site ID | Original source |
 | --- | --- |
+| step5 | stepfun-5-preview-high/shaders/blackhole.frag |
 | sol61 | gpt-6.1-sol-xhigh/shaders/raytrace.frag |
 | grok47 | grok-4.7/shaders/trace.frag |
 | mistral4 | mistral-large-4/src/shaders.h, kRtFs |
@@ -21,7 +22,7 @@ Flux and blackbody tables are exported by the original native C++ functions. Flo
 
 The native tone curves are preserved. Browser bloom uses a single-pass Gaussian sampling adaptation of the native HDR output; it does not reproduce every native downsample/blur pyramid or temporal filter. Gallery images and unavailable-browser fallbacks remain original native captures. These adaptations are separately identified as live WebGL2 on the site.
 
-`live/bh-core.js` supports a per-model composite shader and clears composite uniform locations when switching programs. `live/live.js` provides existing site camera helpers and renderer configs. `live/imports.js` registers the ten additions. The existing Fable 5.1 port is also included and enabled on the site. `sonnet.frag` is included for the model-switch regression check.
+`live/bh-core.js` supports a per-model composite shader and clears composite uniform locations when switching programs. `live/live.js` provides existing site camera helpers and renderer configs. `live/imports.js` registers ten additions; `live/step5.js` registers StepFun 5 Preview. The existing Fable 5.1 port is also included and enabled on the site. `sonnet.frag` is included for the model-switch regression check.
 
 ## Validate in a browser
 
@@ -41,3 +42,7 @@ clang++ -std=c++17 -O2 browser/tools/export-browser-tables.cpp \
 ```
 
 The submission checksum manifest covers the preserved native projects; browser adaptations have a separate manifest in this directory.
+
+StepFun preserves the native camera basis, all four shader scenes, 320 integration steps, disk transfer and ACES/vignette/gamma sequence. Its native bright-pass knee is retained in a single-pass Gaussian bloom adaptation. Temporal accumulation is omitted and the subpixel jitter is zero; native captures preserve the original accumulated output. The tiny final-composite dither is stationary in the browser. The validation page supports `?models=step5,sonnet,step5` to check all four StepFun scenes, orbit, zoom, disk switches, reset and switching away and back in one persistent WebGL context.
+
+The StepFun native host clears the HDR target every frame before blending; after warmup, this scales the submitted shader output by 0.05. The browser retains that steady-state attenuation by default. **Raw samples** corresponds to the original `--single` flag and removes it. Native camera/scene warmup transitions and jitter are not reproduced. Disk speed retains both native time multipliers.

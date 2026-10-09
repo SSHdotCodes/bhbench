@@ -8,6 +8,10 @@ def glsl(s):
     s=re.sub(r'\b(?:uv|vUv)\b','vUV',s)
     return s.lstrip()
 
+step=(SRC/'stepfun-5-preview-high/shaders/blackhole.frag').read_text().replace('#version 330 core','#version 300 es\nprecision highp int;').replace('void main()','void nativeMain()',1)
+step+='\n// Match the submitted host: the cleared HDR target is blended with alpha 0.05\n// after warmup. --single in the native app bypasses that attenuation.\nuniform float uNativeGain;\nvoid main(){nativeMain();outColor.rgb*=uNativeGain;}\n'
+(DST/'step5.frag').write_text(step)
+
 def raw(folder,path,name):
     s=(SRC/folder/path).read_text()
     return re.search(r'\b'+name+r'\s*=\s*R"GLSL\((.*?)\)GLSL"',s,re.S).group(1)

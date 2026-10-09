@@ -6,12 +6,13 @@ The files inside `submissions/` are imported from the preserved submission folde
 
 ## Live browser adaptations
 
-The ten newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
+The eleven newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
 
 ## Current models
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| StepFun 5 Preview | [`stepfun-5-preview-high`](submissions/stepfun-5-preview-high) | OpenCode Go; high reasoning; original C++/OpenGL source; four live scenes |
 | Claude Haiku 5.5 | [`claude-haiku-5.5-xhigh`](submissions/claude-haiku-5.5-xhigh) | Claude Code; xhigh reasoning; original C++/Metal render; 25 physics checks passed |
 | Claude Opus 5.5 | [`claude-opus-5.5`](submissions/claude-opus-5.5) | Preserved C++/Metal source already published on the live site |
 | GPT 6.1 Sol | [`gpt-6.1-sol-xhigh`](submissions/gpt-6.1-sol-xhigh) | Codex; xhigh reasoning |
@@ -82,3 +83,7 @@ Added 13 distinct model submissions and the missing Claude Opus 5.5 source. Sepa
 ## October 7, 2026 addition
 
 Added Claude Haiku 5.5 from the original Claude Code run at xhigh effort. Its complete submitted project, seven renders and existing binaries are preserved without source or shader edits. The native validation executable passed all 25 physics checks. The distinct-model catalog now has 26 current models and 17 old models.
+
+## October 9, 2026 addition
+
+Added StepFun 5 Preview from the original OpenCode Go run at high reasoning. All 121 assistant responses identify `step-5-preview-free`. The original project and four native captures are preserved without source edits, excluding generated CMake build files. Its submitted ray tracer, spacetime grid, lensing view and Flamm funnel run live in the browser. The distinct-model catalog now contains 25 current models and 17 old models (42 total).
