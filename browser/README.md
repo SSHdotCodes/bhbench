@@ -4,6 +4,7 @@ These ports make the successful recent additions interactive on [BHBench](https:
 
 | Site ID | Original source |
 | --- | --- |
+| musewonder | muse-wonder-1.0/shaders/blackhole.frag and grid.vert/frag |
 | step5 | stepfun-5-preview-high/shaders/blackhole.frag |
 | sol61 | gpt-6.1-sol-xhigh/shaders/raytrace.frag |
 | grok47 | grok-4.7/shaders/trace.frag |
@@ -46,3 +47,5 @@ The submission checksum manifest covers the preserved native projects; browser a
 StepFun preserves the native camera basis, all four shader scenes, 320 integration steps, disk transfer and ACES/vignette/gamma sequence. Its native bright-pass knee is retained in a single-pass Gaussian bloom adaptation. Temporal accumulation is omitted and the subpixel jitter is zero; native captures preserve the original accumulated output. The tiny final-composite dither is stationary in the browser. The validation page supports `?models=step5,sonnet,step5` to check all four StepFun scenes, orbit, zoom, disk switches, reset and switching away and back in one persistent WebGL context.
 
 The StepFun native host clears the HDR target every frame before blending; after warmup, this scales the submitted shader output by 0.05. The browser retains that steady-state attenuation by default. **Raw samples** corresponds to the original `--single` flag and removes it. Native camera/scene warmup transitions and jitter are not reproduced. Disk speed retains both native time multipliers.
+
+Muse Wonder 1.0 uses `live/musewonder.js` for the native camera, submitted polar grid geometry and all three views. Its original ACES/gamma shader is preserved; no extra HDR bloom is applied. WebGL line rasterization differs from native GL line smoothing. Pause freezes simulation time, and auto-orbit follows the native 0.045 rad/s rate. The original 400-iteration loop cap is retained for the 420-step preset. Validate with `?models=musewonder,sonnet,musewonder` to exercise camera, scene, disk, grid, lensing, pause and context-switch checks.

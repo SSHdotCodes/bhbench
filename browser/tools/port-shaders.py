@@ -164,3 +164,7 @@ for mid,sampler in [('grok47','uFluxTex'),('mimo26flash','uBB')]:
 # Keep the generated adaptations free of trailing whitespace.
 for p in DST.glob('*.frag'):
     p.write_text(''.join(line.rstrip()+'\n' for line in p.read_text().splitlines()))
+
+# Muse Wonder: preserve all submitted GLSL math, adapting only dialect/varying.
+for original, derived in [("blackhole.frag", "musewonder.frag"), ("grid.vert", "musewonder-grid.vert"), ("grid.frag", "musewonder-grid.frag")]:
+    (DST/derived).write_text(glsl((SRC/"muse-wonder-1.0/shaders"/original).read_text()))

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-12",
   "site": "https://bhbench.ssh.codes",
   "currentModelIds": [
     "sol61",
@@ -20,6 +20,7 @@
     "qwen3827b",
     "deepseek4",
     "terraxhigh",
+    "musewonder",
     "muse13",
     "composer",
     "hy3",
@@ -48,6 +49,19 @@
     "qwen37flash"
   ],
   "newSubmissions": [
+    {
+      "id": "musewonder",
+      "name": "Muse Wonder 1.0",
+      "provider": "Muse",
+      "folder": "muse-wonder-1.0",
+      "harness": "Muse Code",
+      "reasoning": "Not logged",
+      "outputTokens": 39037,
+      "cost": "Unavailable",
+      "rate": "Not recorded",
+      "recordNote": "October 12, 2026. Muse Code 1.4.6 session 01a13115-8201-7932-bb10-e3a27c094588 records the switch to meta/muse-wonder-1.0 before generation and identifies that model in all 72 completed root-session responses. Root-session usage reports 39,037 output tokens and 11,145 reasoning tokens; delegated helper usage is excluded from this displayed count. Reasoning effort and billing are not verified. Original C++/OpenGL source is preserved without repairs, excluding generated CMake files. The browser adapts the submitted ray shader, native camera and polar grid geometry, with all three original views. Native line smoothing differs in WebGL2; the submitted 400-iteration shader cap is retained even for the 420-step setting.",
+      "record": "October 12, 2026. Muse Code 1.4.6 session 01a13115-8201-7932-bb10-e3a27c094588 records the switch to meta/muse-wonder-1.0 before generation and identifies that model in all 72 completed root-session responses. Root-session usage reports 39,037 output tokens and 11,145 reasoning tokens; delegated helper usage is excluded from this displayed count. Reasoning effort and billing are not verified. Original C++/OpenGL source is preserved without repairs, excluding generated CMake files. The browser adapts the submitted ray shader, native camera and polar grid geometry, with all three original views. Native line smoothing differs in WebGL2; the submitted 400-iteration shader cap is retained even for the 420-step setting."
+    },
     {
       "id": "step5",
       "name": "StepFun 5 Preview",

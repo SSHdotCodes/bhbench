@@ -6,12 +6,13 @@ The files inside `submissions/` are imported from the preserved submission folde
 
 ## Live browser adaptations
 
-The eleven newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
+The twelve newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
 
 ## Current models
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Muse Wonder 1.0 | [`muse-wonder-1.0`](submissions/muse-wonder-1.0) | Muse Code 1.4.6; model identity verified in session records; three live views |
 | StepFun 5 Preview | [`stepfun-5-preview-high`](submissions/stepfun-5-preview-high) | OpenCode Go; high reasoning; original C++/OpenGL source; four live scenes |
 | Claude Haiku 5.5 | [`claude-haiku-5.5-xhigh`](submissions/claude-haiku-5.5-xhigh) | Claude Code; xhigh reasoning; original C++/Metal render; 25 physics checks passed |
 | Claude Opus 5.5 | [`claude-opus-5.5`](submissions/claude-opus-5.5) | Preserved C++/Metal source already published on the live site |
@@ -87,3 +88,7 @@ Added Claude Haiku 5.5 from the original Claude Code run at xhigh effort. Its co
 ## October 9, 2026 addition
 
 Added StepFun 5 Preview from the original OpenCode Go run at high reasoning. All 121 assistant responses identify `step-5-preview-free`. The original project and four native captures are preserved without source edits, excluding generated CMake build files. Its submitted ray tracer, spacetime grid, lensing view and Flamm funnel run live in the browser. The distinct-model catalog now contains 25 current models and 17 old models (42 total).
+
+## October 12, 2026 addition
+
+Added Muse Wonder 1.0 from its original Muse Code session. The selected model and all 72 root-session completions identify `muse-wonder-1.0`. Source and deterministic native captures are preserved without repairs; generated CMake files are excluded. Its submitted ray tracer and separate polar grid run live in all three original views. The distinct-model catalog contains 26 current models and 17 old models (43 total).
