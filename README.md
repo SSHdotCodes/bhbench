@@ -6,12 +6,13 @@ The files inside `submissions/` are imported from the preserved submission folde
 
 ## Live browser adaptations
 
-The twelve newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
+The thirteen newly imported working renderers now run live on the site, along with the existing Fable 5.1 browser port. Their WebGL2 adaptations, native lookup tables, and browser validation page are in [`browser/`](browser/README.md). Original files under `submissions/` remain unchanged.
 
 ## Current models
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Gemini 4 Argon | [`gemini-4-argon`](submissions/gemini-4-argon) | OpenCode / OpenRouter; high reasoning; source reproduced from recorded writes; live native presets |
 | Muse Wonder 1.0 | [`muse-wonder-1.0`](submissions/muse-wonder-1.0) | Muse Code 1.4.6; model identity verified in session records; three live views |
 | StepFun 5 Preview | [`stepfun-5-preview-high`](submissions/stepfun-5-preview-high) | OpenCode Go; high reasoning; original C++/OpenGL source; four live scenes |
 | Claude Haiku 5.5 | [`claude-haiku-5.5-xhigh`](submissions/claude-haiku-5.5-xhigh) | Claude Code; xhigh reasoning; original C++/Metal render; 25 physics checks passed |
@@ -92,3 +93,7 @@ Added StepFun 5 Preview from the original OpenCode Go run at high reasoning. All
 ## October 12, 2026 addition
 
 Added Muse Wonder 1.0 from its original Muse Code session. The selected model and all 72 root-session completions identify `muse-wonder-1.0`. Source and deterministic native captures are preserved without repairs; generated CMake files are excluded. Its submitted ray tracer and separate polar grid run live in all three original views. The distinct-model catalog contains 26 current models and 17 old models (43 total).
+
+## October 13, 2026 addition
+
+Added Gemini 4 Argon from the original OpenCode/OpenRouter run at high reasoning, confirmed in all 44 assistant responses. Replaying the recorded writes and edits exactly reproduces all eight submitted source, build and documentation files. Its original source, executable and native capture are preserved without repairs. The run used 100,617 output tokens including reasoning, and reports about $2.45 of cost. The browser runs its submitted ray tracer, exported native funnel and photon paths, original bloom passes and five original presets plus the default view. The distinct-model catalog contains 27 current models and 17 old models (44 total).

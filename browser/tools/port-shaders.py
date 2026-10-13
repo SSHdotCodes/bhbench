@@ -168,3 +168,9 @@ for p in DST.glob('*.frag'):
 # Muse Wonder: preserve all submitted GLSL math, adapting only dialect/varying.
 for original, derived in [("blackhole.frag", "musewonder.frag"), ("grid.vert", "musewonder-grid.vert"), ("grid.frag", "musewonder-grid.frag")]:
     (DST/derived).write_text(glsl((SRC/"muse-wonder-1.0/shaders"/original).read_text()))
+
+# Argon: retain all submitted math and the complete native postprocess passes.
+argon = (SRC/"gemini-4-argon/src/shaders.hpp").read_text()
+for symbol, filename in [("RAYTRACE_FRAG_SHADER", "argon4.frag"), ("GRID_VERT_SHADER", "argon4-grid.vert"), ("GRID_FRAG_SHADER", "argon4-grid.frag"), ("BLOOM_FRAG_SHADER", "argon4-bloom.frag"), ("COMPOSITE_FRAG_SHADER", "argon4-composite.frag")]:
+    shader = re.search(r"\b"+symbol+r'\s*=\s*R"GLSL\((.*?)\)GLSL"', argon, re.S).group(1)
+    (DST/filename).write_text(glsl(shader))

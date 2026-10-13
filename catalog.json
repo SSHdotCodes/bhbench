@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "site": "https://bhbench.ssh.codes",
   "currentModelIds": [
     "sol61",
@@ -26,6 +26,7 @@
     "hy3",
     "kimi",
     "inkling",
+    "argon4",
     "gemini38",
     "ling30"
   ],
@@ -49,6 +50,19 @@
     "qwen37flash"
   ],
   "newSubmissions": [
+    {
+      "id": "argon4",
+      "name": "Gemini 4 Argon",
+      "provider": "Google",
+      "folder": "gemini-4-argon",
+      "harness": "OpenCode",
+      "reasoning": "high",
+      "outputTokens": 100617,
+      "cost": "$2.45",
+      "rate": "Not verified",
+      "recordNote": "October 13, 2026. OpenCode session ses_ec963608effe4Jy43p0b8kp3R5, exported with CLI 2.0.28, identifies openrouter/google/gemini-4-argon at high reasoning in all 44 assistant responses. Counted once per response: 63,763 text/tool output tokens plus 36,854 reasoning tokens = 100,617 output tokens; 584,224 uncached input tokens and 2,776,600 cache-read tokens. Those responses report $2.452278 of cost; the session aggregate reports $2.452354 and includes another 19 output and 665 input tokens. Published API rates are not independently verified. The original benchmark brief was followed by four continue messages. Replaying the recorded writes and edits reproduces all eight submitted source/build/documentation files byte for byte. The unchanged C++/OpenGL binary renders successfully on Apple M4 Max. Browser adaptation retains the submitted ray/grid shaders and native bright-pass plus two separable blur iterations. Funnel meshes and photon beam paths are exported by the original C++ generator for the default view and five presets. Meshes use time-zero geometry with native animated shader pulses; continuous native spin/depth editing and telemetry HUD remain in the original app.",
+      "record": "October 13, 2026. OpenCode session ses_ec963608effe4Jy43p0b8kp3R5, exported with CLI 2.0.28, identifies openrouter/google/gemini-4-argon at high reasoning in all 44 assistant responses. Counted once per response: 63,763 text/tool output tokens plus 36,854 reasoning tokens = 100,617 output tokens; 584,224 uncached input tokens and 2,776,600 cache-read tokens. Those responses report $2.452278 of cost; the session aggregate reports $2.452354 and includes another 19 output and 665 input tokens. Published API rates are not independently verified. The original benchmark brief was followed by four continue messages. Replaying the recorded writes and edits reproduces all eight submitted source/build/documentation files byte for byte. The unchanged C++/OpenGL binary renders successfully on Apple M4 Max. Browser adaptation retains the submitted ray/grid shaders and native bright-pass plus two separable blur iterations. Funnel meshes and photon beam paths are exported by the original C++ generator for the default view and five presets. Meshes use time-zero geometry with native animated shader pulses; continuous native spin/depth editing and telemetry HUD remain in the original app."
+    },
     {
       "id": "musewonder",
       "name": "Muse Wonder 1.0",
