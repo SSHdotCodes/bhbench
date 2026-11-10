@@ -1,0 +1,4 @@
+build/
+*.ppm
+black-hole-screenshot.ppm
+.DS_Store

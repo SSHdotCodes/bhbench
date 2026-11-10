@@ -4,6 +4,14 @@ These ports make the successful recent additions interactive on [BHBench](https:
 
 | Site ID | Original source |
 | --- | --- |
+| fable52 | claude-fable-5.2/shaders/*.frag, *.glsl, grid.vert/frag; native tables from browser/tools/fable52-export-tables.cpp |
+| kimi31 | kimi-k3.1-pro/shaders/blackhole.frag, embedding.vert/frag and present.frag |
+| terra61 | gpt-6.1-terra-xhigh/shaders/scene.frag |
+| qwen4 | qwen4/shaders/raytrace.frag, grid.vert/frag and bloom passes |
+| hy4 | tencent-hy4/src/shaders.hpp, FS_BLACKHOLE |
+| deepseek41flash | deepseek-v4.1-flash/src/shaders/*.frag; blackbody table from its src/blackbody.cpp |
+| inkling2small | inkling-2-small/src/Shaders.h |
+| museember | muse-ember/src/main.cpp embedded shaders and Flamm grid |
 | argon4 | gemini-4-argon/src/shaders.hpp, physics.hpp and spacetime_grid.hpp |
 | musewonder | muse-wonder-1.0/shaders/blackhole.frag and grid.vert/frag |
 | step5 | stepfun-5-preview-high/shaders/blackhole.frag |
@@ -61,3 +69,11 @@ clang++ -std=c++17 -O2 -I/opt/homebrew/include browser/tools/export-argon-meshes
   -framework IOKit -framework CoreVideo -o /tmp/bhbench-argon-export
 /tmp/bhbench-argon-export browser/live/argon4-meshes
 ```
+
+## November 9, 2026 additions
+
+Claude Fable 5.2, Kimi K3.1 Pro, GPT 6.1 Terra, Qwen4, Tencent HY4, DeepSeek V4.1 Flash, Inkling 2 Small and Muse Ember each register a small module in `live/<id>.js` with shaders in `live/shaders/`. Each keeps the model's submitted photon integrator and shading; only GLSL headers, precision and host API calls are adapted for WebGL2, and the site's orbit and zoom controls are added. Fable 5.2's disk, blackbody and embedding tables (`live/lookups/fable52.json`) and DeepSeek V4.1 Flash's blackbody table (`live/lookups/deepseek41flash-bb.json`) are exported by the models' own C++ functions; the exporters are in `tools/`.
+
+Known browser differences: Fable 5.2 uses a 1024 sky cubemap instead of the native 2048 and keeps its native spin of 0.9; where a port draws grid lines, WebGL line rasterization differs from native GL; native HUDs and split-screen layouts stay in the archived applications. Tencent HY4's two-sheet Flamm view and Kimi K3.1 Pro's native HUD are shown only in the native captures.
+
+These modules were validated in local copies of the site rather than `live/import-test.html`. Each port was checked in headless Chromium (Playwright, Metal ANGLE) for visible pixels, orbit, zoom, supported toggles, reset and switching renderers in one WebGL context, next to its native capture. The merged site was then loaded with all 52 entries; every live view's rendered pixels were read back, with no console or WebGL errors.

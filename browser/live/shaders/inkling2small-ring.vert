@@ -1,0 +1,8 @@
+#version 300 es
+precision highp float;
+precision highp int;
+layout(location = 0) in vec3 inPos;
+uniform mat4 uViewProj;
+void main() {
+    gl_Position = uViewProj * vec4(inPos, 1.0);
+}

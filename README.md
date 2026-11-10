@@ -12,6 +12,14 @@ The thirteen newly imported working renderers now run live on the site, along wi
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Claude Fable 5.2 | [`claude-fable-5.2`](submissions/claude-fable-5.2) | Claude Code; xhigh reasoning; 85 native physics checks passed; live Kerr port |
+| Kimi K3.1 Pro | [`kimi-k3.1-pro`](submissions/kimi-k3.1-pro) | Kimi Code; reasoning setting not recorded; live port with Flamm embedding inset |
+| GPT 6.1 Terra | [`gpt-6.1-terra-xhigh`](submissions/gpt-6.1-terra-xhigh) | Codex; xhigh reasoning; live port |
+| Qwen4 | [`qwen4`](submissions/qwen4) | Claude Code harness; restart continuation added packaging and docs only; live port |
+| Tencent HY4 | [`tencent-hy4`](submissions/tencent-hy4) | OpenCode / OpenRouter; high reasoning; live port |
+| DeepSeek V4.1 Flash | [`deepseek-v4.1-flash`](submissions/deepseek-v4.1-flash) | Mistral Vibe; max reasoning; live port with native blackbody table |
+| Inkling 2 Small | [`inkling-2-small`](submissions/inkling-2-small) | OpenCode; max reasoning; includes one user Continue turn that edited source; live port |
+| Muse Ember | [`muse-ember`](submissions/muse-ember) | OpenCode / OpenRouter; max reasoning; live ray trace and Flamm grid |
 | Gemini 4 Argon | [`gemini-4-argon`](submissions/gemini-4-argon) | OpenCode / OpenRouter; high reasoning; source reproduced from recorded writes; live native presets |
 | Muse Wonder 1.0 | [`muse-wonder-1.0`](submissions/muse-wonder-1.0) | Muse Code 1.4.6; model identity verified in session records; three live views |
 | StepFun 5 Preview | [`stepfun-5-preview-high`](submissions/stepfun-5-preview-high) | OpenCode Go; high reasoning; original C++/OpenGL source; four live scenes |
@@ -24,21 +32,14 @@ The thirteen newly imported working renderers now run live on the site, along wi
 | Mistral Large 4 | [`mistral-large-4`](submissions/mistral-large-4) | OpenCode; Default reasoning |
 | MiMo V2.6 Flash | [`mimo-v2.6-flash`](submissions/mimo-v2.6-flash) | OpenCode; Default reasoning; local model run |
 | Qwen 3.8 27B | [`qwen-3.8-27b`](submissions/qwen-3.8-27b) | OpenCode; Default reasoning; local model run |
-| DeepSeek V4 Flash | [`deepseek-v4-flash`](submissions/deepseek-v4-flash) | OpenCode; Default reasoning |
 | Ling 3.0 Flash | [`ling-3.0-flash`](submissions/ling-3.0-flash) | Native render unavailable; original source preserved |
 | GPT 6 Astra | [`gpt-6-astra-xhigh`](submissions/gpt-6-astra-xhigh) | xhigh reasoning, generated with Codex |
-| Claude Fable 5.1 | [`claude-fable-5.1`](submissions/claude-fable-5.1) | xhigh reasoning, generated with Claude Code |
 | GLM 5.3 | [`glm-5.3`](submissions/glm-5.3) | max reasoning, generated with OpenCode |
 | GLM 5.3 Flash | [`glm-5.3-flash`](submissions/glm-5.3-flash) | Originally submitted as ox-alpha; max reasoning, generated with OpenCode |
-| Qwen 3.8 Max 0902 | [`qwen-3.8-max-0902`](submissions/qwen-3.8-max-0902) | Generated with OpenCode |
 | Qwen 3.8 Flash Next (NVFP4) | [`qwen-3.8-flash-next-nvfp4`](submissions/qwen-3.8-flash-next-nvfp4) | Final standalone local generation with OpenCode |
-| GPT-5.6 Terra | [`gpt-5.6-terra-xhigh`](submissions/gpt-5.6-terra-xhigh) | xhigh reasoning result |
 | Muse Spark 1.3 | [`muse-spark-1.3-xhigh`](submissions/muse-spark-1.3-xhigh) | xhigh reasoning, generated with Muse Code |
 | Muse Spark 1.3 Max | [`muse-spark-1.3-max`](submissions/muse-spark-1.3-max) | max reasoning, generated with Muse Code |
 | Composer 2.5 | [`composer-2.5`](submissions/composer-2.5) |  |
-| Tencent HY3 | [`tencent-hy3`](submissions/tencent-hy3) |  |
-| Kimi K3 | [`kimi-k3`](submissions/kimi-k3) |  |
-| Inkling | [`inkling`](submissions/inkling) |  |
 | Gemini 3.8 Flash | [`gemini-3.8-flash`](submissions/gemini-3.8-flash) | Original C++/Metal project, generated with OpenCode |
 
 ## Old models
@@ -47,6 +48,13 @@ Superseded results are kept here with their original submission paths so existin
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Claude Fable 5.1 | [`claude-fable-5.1`](submissions/claude-fable-5.1) | xhigh reasoning, generated with Claude Code |
+| Qwen 3.8 Max 0902 | [`qwen-3.8-max-0902`](submissions/qwen-3.8-max-0902) | Generated with OpenCode |
+| DeepSeek V4 Flash | [`deepseek-v4-flash`](submissions/deepseek-v4-flash) | OpenCode; Default reasoning |
+| GPT-5.6 Terra | [`gpt-5.6-terra-xhigh`](submissions/gpt-5.6-terra-xhigh) | xhigh reasoning result |
+| Tencent HY3 | [`tencent-hy3`](submissions/tencent-hy3) |  |
+| Kimi K3 | [`kimi-k3`](submissions/kimi-k3) |  |
+| Inkling | [`inkling`](submissions/inkling) |  |
 | GPT 6 Sol | [`gpt-6-sol-xhigh`](submissions/gpt-6-sol-xhigh) | Codex; xhigh reasoning |
 | Qwen 3.7 Flash | [`qwen-3.7-flash`](submissions/qwen-3.7-flash) | OpenCode; Default reasoning |
 | Claude Fable 5 | [`claude-fable-5-cpp`](submissions/claude-fable-5-cpp) | Default C++ result |
@@ -97,3 +105,11 @@ Added Muse Wonder 1.0 from its original Muse Code session. The selected model an
 ## October 13, 2026 addition
 
 Added Gemini 4 Argon from the original OpenCode/OpenRouter run at high reasoning, confirmed in all 44 assistant responses. Replaying the recorded writes and edits exactly reproduces all eight submitted source, build and documentation files. Its original source, executable and native capture are preserved without repairs. The run used 100,617 output tokens including reasoning, and reports about $2.45 of cost. The browser runs its submitted ray tracer, exported native funnel and photon paths, original bloom passes and five original presets plus the default view. The distinct-model catalog contains 27 current models and 17 old models (44 total).
+
+## November 9, 2026 addition
+
+Added eight submissions: Claude Fable 5.2, Kimi K3.1 Pro, GPT 6.1 Terra, Qwen4, Tencent HY4, DeepSeek V4.1 Flash, Inkling 2 Small and Muse Ember. Each complete project is preserved without source edits; generated CMake build directories, nested Git metadata and `.DS_Store` files are excluded. All eight built and rendered on an Apple M4 Max, and each submitted ray tracer runs live in the browser. Output tokens, cost and rates come from each harness's session records; figures the records do not contain are marked as not recorded rather than estimated.
+
+Follow-up turns were checked. Fable 5.2's later messages only reopened its window, and Qwen4's restart continuation added packaging and documentation without renderer changes. Inkling 2 Small's run includes one user "Continue" turn that edited `src/Shaders.h`, `src/main.cpp` and `README.md`; the archived project is the tree after that turn, as its record states.
+
+These eight entries are not yet scored; the October 13 judge scores are unchanged. Seven superseded entries moved to Old models: Claude Fable 5.1, Qwen 3.8 Max 0902, DeepSeek V4 Flash, GPT-5.6 Terra, Tencent HY3, Kimi K3 and Inkling. The distinct-model catalog contains 28 current models and 24 old models (52 total).
