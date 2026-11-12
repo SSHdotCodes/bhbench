@@ -12,6 +12,7 @@ The thirteen newly imported working renderers now run live on the site, along wi
 
 | Benchmark entry | Folder | Notes |
 | --- | --- | --- |
+| Gemini 4 Hydrogen | [`gemini-4-hydrogen`](submissions/gemini-4-hydrogen) | OpenCode / Vertex AI; high reasoning; Metal compute renderer; live port |
 | Claude Fable 5.2 | [`claude-fable-5.2`](submissions/claude-fable-5.2) | Claude Code; xhigh reasoning; 85 native physics checks passed; live Kerr port |
 | Kimi K3.1 Pro | [`kimi-k3.1-pro`](submissions/kimi-k3.1-pro) | Kimi Code; reasoning setting not recorded; live port with Flamm embedding inset |
 | GPT 6.1 Terra | [`gpt-6.1-terra-xhigh`](submissions/gpt-6.1-terra-xhigh) | Codex; xhigh reasoning; live port |
@@ -113,3 +114,7 @@ Added eight submissions: Claude Fable 5.2, Kimi K3.1 Pro, GPT 6.1 Terra, Qwen4, 
 Follow-up turns were checked. Fable 5.2's later messages only reopened its window, and Qwen4's restart continuation added packaging and documentation without renderer changes. Inkling 2 Small's run includes one user "Continue" turn that edited `src/Shaders.h`, `src/main.cpp` and `README.md`; the archived project is the tree after that turn, as its record states.
 
 These eight entries are not yet scored; the October 13 judge scores are unchanged. Seven superseded entries moved to Old models: Claude Fable 5.1, Qwen 3.8 Max 0902, DeepSeek V4 Flash, GPT-5.6 Terra, Tencent HY3, Kimi K3 and Inkling. The distinct-model catalog contains 28 current models and 24 old models (52 total).
+
+## November 12, 2026 addition
+
+Added Gemini 4 Hydrogen, run through OpenCode on Google Vertex AI at high reasoning, confirmed in all 68 assistant responses. The run had no follow-up messages. Its complete project is preserved without source edits, excluding the generated build directory. It built and passed its own tests on an Apple M4 Max, and its Metal compute ray tracer, Kerr spacetime grid and bloom run live in the browser. The run used 118,559 output tokens including reasoning. No verifiable Vertex price for Hydrogen was published at the time, so cost is not recorded. The entry is not yet scored and supersedes no other entry. The distinct-model catalog contains 29 current models and 24 old models (53 total).

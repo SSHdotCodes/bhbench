@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "site": "https://bhbench.ssh.codes",
   "currentModelIds": [
     "sol61",
@@ -28,6 +28,7 @@
     "kimi31",
     "inkling2small",
     "argon4",
+    "hydrogen4",
     "gemini38",
     "ling30"
   ],
@@ -330,6 +331,20 @@
       "rate": "$0.10 in · $0.50 out · $0.004 cache",
       "recordNote": "November 9, 2026. OpenCode session ses_e3c976f11ffe0gdnzrtELodu53 identifies openrouter/meta/muse-ember at variant max in all 96 assistant responses. One user message; no later user turn edited the project. Counted once per response: 57,446 text/tool output tokens plus 55,682 reasoning tokens = 113,128 output tokens; 216,580 uncached input tokens and 11,351,052 cache-read tokens. The session cost counter is 0.123626208, which matches Meta's published Muse Ember rates for requests up to 200K input tokens ($0.10 uncached input, $0.50 output, $0.004 cached input, per million). The long-context tier was not what this session's counter bills. T3 thread bhbench1-muse-ember-max-opencode-20261109 completed in one run. The native --still capture on Apple M4 Max is yaw 0.6, pitch 0.45, distance 42, HUD off, after one frame. The window framebuffer was 2560×1440 and the program's first-frame internal scale was 0.75; the site JPEG is that frame resized to 2880×1800. The browser keeps the submitted tracer and the separate Flamm grid. The native HUD is not recreated. WebGL2 uses a constant 280-step loop with the same uSteps cutoff, and line width stays 1.",
       "record": "November 9, 2026. OpenCode session ses_e3c976f11ffe0gdnzrtELodu53 identifies openrouter/meta/muse-ember at variant max in all 96 assistant responses. One user message; no later user turn edited the project. Counted once per response: 57,446 text/tool output tokens plus 55,682 reasoning tokens = 113,128 output tokens; 216,580 uncached input tokens and 11,351,052 cache-read tokens. The session cost counter is 0.123626208, which matches Meta's published Muse Ember rates for requests up to 200K input tokens ($0.10 uncached input, $0.50 output, $0.004 cached input, per million). The long-context tier was not what this session's counter bills. T3 thread bhbench1-muse-ember-max-opencode-20261109 completed in one run. The native --still capture on Apple M4 Max is yaw 0.6, pitch 0.45, distance 42, HUD off, after one frame. The window framebuffer was 2560×1440 and the program's first-frame internal scale was 0.75; the site JPEG is that frame resized to 2880×1800. The browser keeps the submitted tracer and the separate Flamm grid. The native HUD is not recreated. WebGL2 uses a constant 280-step loop with the same uSteps cutoff, and line width stays 1.",
+      "scored": false
+    },
+    {
+      "id": "hydrogen4",
+      "name": "Gemini 4 Hydrogen",
+      "provider": "Google",
+      "folder": "gemini-4-hydrogen",
+      "harness": "OpenCode / Google Vertex AI",
+      "reasoning": "high",
+      "outputTokens": 118559,
+      "cost": "Unavailable",
+      "rate": "Not recorded",
+      "recordNote": "November 12, 2026. OpenCode 2.2.7 session ses_e319007dfffeknckVPfZ7GleK1 identifies google-vertex/gemini-4-hydrogen at high reasoning in all 68 assistant responses. Counted once per response in session_message: 70,351 text/tool output tokens plus 48,208 reasoning tokens = 118,559 output tokens; 1,441,912 uncached input and 5,414,803 cache-read tokens. Response and session cost counters are zero, but this unreleased Vertex endpoint had no verifiable Hydrogen billing SKU or published rate at staging, so billing is unavailable rather than reported as free. Google Cloud pricing checked November 12 lists Argon and Carbon, with no Hydrogen entry. T3 thread 2cb7ba58-5761-4a90-bc90-5c88184842dd has one benchmark prompt and one run, with no follow-up messages. Original source is preserved without edits; all six native physics test groups pass. Browser port retains native spin 0.9, the 560-step Mino-time RK4 equations, disk transfer, depth-occluded Kerr embedding and ACES/vignette/gamma curve. Default mesh is exported by the native C++ generator; other spins use its direct JavaScript translation. MPS bloom is approximated by separable Gaussian passes at native half-resolution sigmas 5 and 20. Native HUD and camera easing are omitted; browser resolution controls and orbit/zoom are added.",
+      "record": "November 12, 2026. OpenCode 2.2.7 session ses_e319007dfffeknckVPfZ7GleK1 identifies google-vertex/gemini-4-hydrogen at high reasoning in all 68 assistant responses. Counted once per response in session_message: 70,351 text/tool output tokens plus 48,208 reasoning tokens = 118,559 output tokens; 1,441,912 uncached input and 5,414,803 cache-read tokens. Response and session cost counters are zero, but this unreleased Vertex endpoint had no verifiable Hydrogen billing SKU or published rate at staging, so billing is unavailable rather than reported as free. Google Cloud pricing checked November 12 lists Argon and Carbon, with no Hydrogen entry. T3 thread 2cb7ba58-5761-4a90-bc90-5c88184842dd has one benchmark prompt and one run, with no follow-up messages. Original source is preserved without edits; all six native physics test groups pass. Browser port retains native spin 0.9, the 560-step Mino-time RK4 equations, disk transfer, depth-occluded Kerr embedding and ACES/vignette/gamma curve. Default mesh is exported by the native C++ generator; other spins use its direct JavaScript translation. MPS bloom is approximated by separable Gaussian passes at native half-resolution sigmas 5 and 20. Native HUD and camera easing are omitted; browser resolution controls and orbit/zoom are added.",
       "scored": false
     }
   ]

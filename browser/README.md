@@ -4,6 +4,7 @@ These ports make the successful recent additions interactive on [BHBench](https:
 
 | Site ID | Original source |
 | --- | --- |
+| hydrogen4 | gemini-4-hydrogen/src/shaders/BlackHole.metal (Metal compute); grid from src/platform/MetalApp.mm and src/core/BlackHolePhysics.hpp |
 | fable52 | claude-fable-5.2/shaders/*.frag, *.glsl, grid.vert/frag; native tables from browser/tools/fable52-export-tables.cpp |
 | kimi31 | kimi-k3.1-pro/shaders/blackhole.frag, embedding.vert/frag and present.frag |
 | terra61 | gpt-6.1-terra-xhigh/shaders/scene.frag |
@@ -77,3 +78,18 @@ Claude Fable 5.2, Kimi K3.1 Pro, GPT 6.1 Terra, Qwen4, Tencent HY4, DeepSeek V4.
 Known browser differences: Fable 5.2 uses a 1024 sky cubemap instead of the native 2048 and keeps its native spin of 0.9; where a port draws grid lines, WebGL line rasterization differs from native GL; native HUDs and split-screen layouts stay in the archived applications. Tencent HY4's two-sheet Flamm view and Kimi K3.1 Pro's native HUD are shown only in the native captures.
 
 These modules were validated in local copies of the site rather than `live/import-test.html`. Each port was checked in headless Chromium (Playwright, Metal ANGLE) for visible pixels, orbit, zoom, supported toggles, reset and switching renderers in one WebGL context, next to its native capture. The merged site was then loaded with all 52 entries; every live view's rendered pixels were read back, with no console or WebGL errors.
+
+## November 12, 2026 addition
+
+Gemini 4 Hydrogen's Metal compute ray tracer is translated mechanically to GLSL ES 3.0 by `tools/hydrogen4/port-shaders.py`. The shader bodies stay the submission's: ZAMO photon initialization, the second-order Mino-time Kerr RK4 integrator in u = 1/r with its unit-sphere angular representation, adaptive steps and the 560-step cap at every browser quality setting, plus the disk, beaming, corona, sky and ACES tone curve. The native color and hit-distance outputs become two WebGL2 render targets, so the spacetime grid keeps the native depth occlusion. The grid mesh (`live/hydrogen4-mesh/`) is exported by a verbatim copy of the app's `buildSpacetimeGridMesh` calling the submitted C++ embedding (`tools/hydrogen4/export-grid.py`). MPS Gaussian bloom is approximated with separable Gaussian passes at the native threshold, knee and weights. The native HUD and camera easing are not recreated. Spin defaults to the native 0.9, with the native 0–0.998 range.
+
+Rebuild from the repository root:
+
+```sh
+python3 browser/tools/hydrogen4/port-shaders.py
+python3 browser/tools/hydrogen4/export-grid.py
+clang++ -std=c++20 -O2 browser/tools/hydrogen4/export-grid.cpp -o /tmp/hydrogen4-export-grid
+/tmp/hydrogen4-export-grid browser/live/hydrogen4-mesh
+```
+
+Both commands reproduce the published shader and mesh files byte for byte.
